@@ -1,0 +1,17 @@
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+git = [
+    "pre-commit>=3.2.2",
+    "commitizen>=2.42.1",
+]
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "whatislove118", email = "oleg.pochikalin@mail.ru"},
+]
+dependencies = []
+requires-python = ">=3.11"
+license = {text = "MIT"}
