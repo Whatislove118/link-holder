@@ -7,7 +7,7 @@ git = [
 
 [project]
 name = ""
-version = "0.0.1"
+version = "0.0.2"
 description = ""
 authors = [
     {name = "whatislove118", email = "oleg.pochikalin@mail.ru"},
@@ -82,7 +82,7 @@ ignore = "F0401,C0111,E731"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.0.1"
+version = "0.0.2"
 tag_format = "$version"
 version_files = [
     "pyproject.toml:version"
