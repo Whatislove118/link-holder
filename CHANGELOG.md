@@ -1,1 +1,12 @@
-## v1.1.0 (2023-04-09)
+## 0.0.1 (2023-04-09)
+
+### Fix
+
+- versionion
+
+## 0.0.0 (2023-04-09)
+
+### Feat
+
+- add versioning
+- init tg bot

@@ -82,11 +82,10 @@ ignore = "F0401,C0111,E731"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.0.0"
+version = "0.0.1"
 tag_format = "$version"
 version_files = [
     "VERSION",
-    "setup.py",
     "pyproject.toml:version"
 ]
 bump_message = "bump: version $current_version → $new_version"
