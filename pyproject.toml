@@ -12,6 +12,83 @@ description = ""
 authors = [
     {name = "whatislove118", email = "oleg.pochikalin@mail.ru"},
 ]
-dependencies = []
+dependencies = [
+    "pydantic[dotenv]>=1.10.7",
+    "aiogram>=2.25.1",
+    "uvloop>=0.17.0",
+    "ujson>=5.7.0",
+    "aiohttp[speedups]>=3.8.4",
+]
 requires-python = ">=3.11"
 license = {text = "MIT"}
+
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+target-version = ['py310']
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | migrations
+  )
+)
+'''
+
+[tool.isort]
+known_first_party = "market"
+line_length = 120
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+use_parentheses = true
+
+[tool.pycln]
+all = true
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+no_site_packages = true
+strict_optional = false
+strict = true
+allow_subclassing_any = true
+allow_untyped_calls = true
+pretty = true
+show_error_codes = true
+implicit_reexport = true
+allow_untyped_decorators = true
+warn_return_any = false
+disable_error_code = ["valid-type"]
+
+[tool.poetry.scripts]
+aerich = "aerich.cli:main"
+
+[tool.pylama]
+format = "pylint"
+skip = "*/.tox/*,*/.env/*"
+linters = "pylint,mccabe"
+ignore = "F0401,C0111,E731"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "1.0.0"
+tag_format = "v$version"
+version_files = [
+    # "VERSION",
+    # "setup.py",
+    "pyproject.toml:version"
+]
+bump_message = "bump: version $current_version → $new_version"
+update_changelog_on_bump = true
+annotated_tag = true

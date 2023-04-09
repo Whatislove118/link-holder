@@ -76,6 +76,12 @@ repos:
       - id: interrogate
         args: [--fail-under=0, --verbose]
 
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v2.42.1
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
